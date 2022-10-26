@@ -30,6 +30,7 @@ title.penup()
 title.setposition(8,354)
 
 title.write("↨↨↨↨↨↨----- Space War ----↨↨↨↨↨↨",align="center",font=("Arial",22,"normal"))
+#hiding the pointer till any event is not passed
 title.hideturtle()
 
 #score board
@@ -40,6 +41,7 @@ score_board.penup()
 score_board.setposition(210,310)
 
 score_board.write("Score_Board : {} ".format(score),align="center",font=("Arial",15,"normal"))
+#creating the score board
 score_board.hideturtle()
 
 #player
@@ -55,6 +57,7 @@ sign.left(90)
 speed=4
 
 #bullet of player
+#creating the attributes of the bullets like its movement in x and y direction,its shape and color
 buspeed=10
 bullet = turtle.Turtle()
 bullet.color("red")
@@ -69,6 +72,7 @@ power=turtle.Turtle()
 power.color("green")
 power.shape("square")
 power.right(45)
+#moving the x direction
 power.shapesize(0.75,0.75)
 xc=random.randint(-300,300)
 yc=random.randint(-300,300)
@@ -181,6 +185,7 @@ def live():
     power.penup()
     power.setposition(xc,yc)
 
+
 #speed of the missile
 def fire():
     eb.forward(buspeed)
@@ -206,7 +211,7 @@ def hid_live(life):
     lives1[life].clear()
     lives1[life].hideturtle()
 
-    
+#creating a new space ship  
 def giv_live(life):
     lives1[life].color("green")
     lives1[life].shape("triangle")
@@ -282,7 +287,7 @@ def enemy_bullet(eny1):
 
 #key board function
 board.listen()
-
+#calling the events by .listen()
 board.onkeypress(right,"Right")
 board.onkeypress(left,"Left")
 board.onkeypress(fire_bullet,"space")
