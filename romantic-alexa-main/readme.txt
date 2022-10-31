@@ -8,7 +8,7 @@ For the robot to listen to our voice/speech
 `pip install speechRecognition`
 
 To speak out, or text to speech
-`pip install pyttsx3`
+`pip install pyttsx3
 
 For advance control on browser
 `pip install pywhatkit`
